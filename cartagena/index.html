@@ -84,7 +84,7 @@ body::before {
 }
 .search-box input::placeholder { color: var(--muted); }
 .search-box input:focus { border-color: var(--gold); }
-.search-box::before { content: '\uD83D\uDD0D'; position: absolute; left: 12px; top: 50%; transform: translateY(-50%); font-size: 13px; pointer-events: none; }
+.search-box::before { content: '🔍'; position: absolute; left: 12px; top: 50%; transform: translateY(-50%); font-size: 13px; pointer-events: none; }
 .cats-scroll { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; }
 .cats-scroll::-webkit-scrollbar { display: none; }
 .cat-pill {
@@ -486,12 +486,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <div class="cats-scroll">
       <div class="cat-pill active" onclick="setFilter('todos',this)">Todos</div>
-      <div class="cat-pill" onclick="setFilter('bares',this)">\uD83C\uDF7A Bares</div>
+      <div class="cat-pill" onclick="setFilter('bares',this)">🍺 Bares</div>
       <div class="cat-pill" onclick="setFilter('cafe',this)">? Cafés</div>
-      <div class="cat-pill" onclick="setFilter('comida',this)">\uD83C\uDF7D\uFE0F Comida</div>
-      <div class="cat-pill" onclick="setFilter('plan',this)">\uD83C\uDFAF Planes</div>
-      <div class="cat-pill" onclick="setFilter('arte',this)">\uD83C\uDFA8 Arte</div>
-      <div class="cat-pill" onclick="setFilter('noche',this)">\uD83C\uDF19 Noche</div>
+      <div class="cat-pill" onclick="setFilter('comida',this)">🍽️ Comida</div>
+      <div class="cat-pill" onclick="setFilter('plan',this)">🎯 Planes</div>
+      <div class="cat-pill" onclick="setFilter('arte',this)">🎨 Arte</div>
+      <div class="cat-pill" onclick="setFilter('noche',this)">🌙 Noche</div>
     </div>
   </div>
 
@@ -499,7 +499,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="screen active" id="screen-inicio">
     <div class="banner" id="banner-eventos">
       <div class="banner-header" onclick="toggleBanner()">
-        <div class="banner-flame">\uD83D\uDD25</div>
+        <div class="banner-flame">🔥</div>
         <div class="banner-texto">
           <h3>¿Qué hacer esta noche?</h3>
           <p>Eventos programados para el mes</p>
@@ -550,7 +550,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- BOTON REGISTRO -->
 <div class="wa-float">
   <a class="wa-btn" href="https://elpracheadmin.github.io/elparche-admin/admintaller/" style="text-decoration:none;">
-    <span class="wa-btn-icon">\uD83D\uDCF1</span>
+    <span class="wa-btn-icon">📱</span>
     <span class="wa-btn-text">Registra tu local</span>
   </a>
 </div>
@@ -707,31 +707,31 @@ const places = [
 // EVENTOS
 // --------------------------------------
 const eventList = [
-  { date:'2026-06-08', endDate:'2026-06-08', cat:'comida', icon:'\uD83C\uDF7D\uFE0F', name:'Asamblea de Cocina Tradicional', nit:'', place:'Centro Histórico', price:'Entrada libre', short:'8 de junio' },
-  { date:'2026-06-24', endDate:'2026-06-24', cat:'cultural', icon:'\uD83C\uDFAD', name:'Noche de San Juan', nit:'', place:'Playas y espacios públicos', price:'Entrada libre', short:'24 de junio' },
-  { date:'2026-07-03', endDate:'2026-07-05', cat:'cultural', icon:'\uD83C\uDFAD', name:'Rock Imperium Festival', nit:'', place:'Parque El Batel', price:'Desde 195€', short:'3–5 de julio' },
-  { date:'2026-07-09', endDate:'2026-11-05', cat:'arte', icon:'\uD83C\uDFA8', name:'Festival Internacional de Poesía IPCC', nit:'', place:'Bibliotecas y centros culturales', price:'Entrada libre', short:'9 jul – 5 nov' },
-  { date:'2026-07-14', endDate:'2026-07-14', cat:'arte', icon:'\uD83C\uDFA8', name:'Agenda Cultural Alianza Francesa', nit:'', place:'Alianza Francesa, Centro', price:'Variable', short:'14 de julio' },
-  { date:'2026-07-17', endDate:'2026-07-25', cat:'cultural', icon:'\uD83C\uDFAD', name:'La Mar de Músicas', nit:'', place:'Varios enclaves históricos', price:'Variable', short:'17–25 de julio' },
-  { date:'2026-07-18', endDate:'2026-07-19', cat:'cultural', icon:'\uD83C\uDFAD', name:'Festival de Tambores', nit:'', place:'Palenque y plazas del Centro', price:'Entrada libre', short:'18–19 de julio' },
-  { date:'2026-08-13', endDate:'2026-08-13', cat:'noche', icon:'\uD83C\uDF19', name:'Día de la Champeta', nit:'', place:'Barrios de Cartagena', price:'Entrada libre', short:'13 de agosto' },
-  { date:'2026-08-15', endDate:'2026-08-15', cat:'comida', icon:'\uD83C\uDF7D\uFE0F', name:'Festival de la Arepa de Huevo', nit:'', place:'Getsemaní', price:'Desde $5.000 COP', short:'15 de agosto' },
-  { date:'2026-08-20', endDate:'2026-08-22', cat:'arte', icon:'\uD83C\uDFA8', name:'Festival Música y Danza del Mundo', nit:'', place:'Teatros y plazas del Centro', price:'Variable', short:'20–22 de agosto' },
-  { date:'2026-08-28', endDate:'2026-08-31', cat:'arte', icon:'\uD83C\uDFA8', name:'Parlamento Internacional de Escritores', nit:'', place:'Centro Histórico', price:'Entrada libre', short:'28–31 de agosto' },
-  { date:'2026-09-10', endDate:'2026-09-12', cat:'arte', icon:'\uD83C\uDFA8', name:'Festival Voces del Jazz', nit:'', place:'Plazas y teatros del Centro', price:'Variable', short:'10–12 de septiembre' },
-  { date:'2026-09-18', endDate:'2026-09-20', cat:'arte', icon:'\uD83C\uDFA8', name:'Festival de Guitarras', nit:'', place:'Auditorios del Centro', price:'Variable', short:'18–20 de septiembre' },
-  { date:'2026-09-21', endDate:'2026-09-21', cat:'arte', icon:'\uD83C\uDFA8', name:'Día del Artista Plástico', nit:'', place:'Galerías y espacios culturales', price:'Entrada libre', short:'21 de septiembre' },
-  { date:'2026-10-10', endDate:'2026-10-12', cat:'noche', icon:'\uD83C\uDF19', name:'Festival de Salsa de Cartagena', nit:'', place:'Clubes del Centro Histórico', price:'Desde $40.000 COP', short:'10–12 de octubre' },
-  { date:'2026-10-29', endDate:'2026-11-16', cat:'arte', icon:'\uD83C\uDFA8', name:'Cartagena Jazz Festival', nit:'', place:'Auditorio El Batel', price:'Por confirmar', short:'29 oct – 16 nov' },
-  { date:'2026-10-30', endDate:'2026-10-30', cat:'noche', icon:'\uD83C\uDF19', name:'Noche de Candela y Jolgorio', nit:'', place:'Plazas del Centro Histórico', price:'Entrada libre', short:'30 de octubre' },
-  { date:'2026-11-01', endDate:'2026-11-04', cat:'arte', icon:'\uD83C\uDFA8', name:'Festival Regional de Gaitas', nit:'', place:'Barrio El Socorro', price:'Entrada libre', short:'1–4 de noviembre' },
-  { date:'2026-11-07', endDate:'2026-11-09', cat:'arte', icon:'\uD83C\uDFA8', name:'Festival de Poesía de Cartagena', nit:'', place:'Bibliotecas y cafés del Centro', price:'Entrada libre', short:'7–9 de noviembre' },
-  { date:'2026-11-11', endDate:'2026-11-16', cat:'cultural', icon:'\uD83C\uDFAD', name:'Fiestas de Independencia', nit:'', place:'Calles del Centro Histórico', price:'Entrada libre', short:'11–16 de noviembre' },
+  { date:'2026-06-08', endDate:'2026-06-08', cat:'comida', icon:'🍽️', name:'Asamblea de Cocina Tradicional', nit:'', place:'Centro Histórico', price:'Entrada libre', short:'8 de junio' },
+  { date:'2026-06-24', endDate:'2026-06-24', cat:'cultural', icon:'🎭', name:'Noche de San Juan', nit:'', place:'Playas y espacios públicos', price:'Entrada libre', short:'24 de junio' },
+  { date:'2026-07-03', endDate:'2026-07-05', cat:'cultural', icon:'🎭', name:'Rock Imperium Festival', nit:'', place:'Parque El Batel', price:'Desde 195€', short:'3–5 de julio' },
+  { date:'2026-07-09', endDate:'2026-11-05', cat:'arte', icon:'🎨', name:'Festival Internacional de Poesía IPCC', nit:'', place:'Bibliotecas y centros culturales', price:'Entrada libre', short:'9 jul – 5 nov' },
+  { date:'2026-07-14', endDate:'2026-07-14', cat:'arte', icon:'🎨', name:'Agenda Cultural Alianza Francesa', nit:'', place:'Alianza Francesa, Centro', price:'Variable', short:'14 de julio' },
+  { date:'2026-07-17', endDate:'2026-07-25', cat:'cultural', icon:'🎭', name:'La Mar de Músicas', nit:'', place:'Varios enclaves históricos', price:'Variable', short:'17–25 de julio' },
+  { date:'2026-07-18', endDate:'2026-07-19', cat:'cultural', icon:'🎭', name:'Festival de Tambores', nit:'', place:'Palenque y plazas del Centro', price:'Entrada libre', short:'18–19 de julio' },
+  { date:'2026-08-13', endDate:'2026-08-13', cat:'noche', icon:'🌙', name:'Día de la Champeta', nit:'', place:'Barrios de Cartagena', price:'Entrada libre', short:'13 de agosto' },
+  { date:'2026-08-15', endDate:'2026-08-15', cat:'comida', icon:'🍽️', name:'Festival de la Arepa de Huevo', nit:'', place:'Getsemaní', price:'Desde $5.000 COP', short:'15 de agosto' },
+  { date:'2026-08-20', endDate:'2026-08-22', cat:'arte', icon:'🎨', name:'Festival Música y Danza del Mundo', nit:'', place:'Teatros y plazas del Centro', price:'Variable', short:'20–22 de agosto' },
+  { date:'2026-08-28', endDate:'2026-08-31', cat:'arte', icon:'🎨', name:'Parlamento Internacional de Escritores', nit:'', place:'Centro Histórico', price:'Entrada libre', short:'28–31 de agosto' },
+  { date:'2026-09-10', endDate:'2026-09-12', cat:'arte', icon:'🎨', name:'Festival Voces del Jazz', nit:'', place:'Plazas y teatros del Centro', price:'Variable', short:'10–12 de septiembre' },
+  { date:'2026-09-18', endDate:'2026-09-20', cat:'arte', icon:'🎨', name:'Festival de Guitarras', nit:'', place:'Auditorios del Centro', price:'Variable', short:'18–20 de septiembre' },
+  { date:'2026-09-21', endDate:'2026-09-21', cat:'arte', icon:'🎨', name:'Día del Artista Plástico', nit:'', place:'Galerías y espacios culturales', price:'Entrada libre', short:'21 de septiembre' },
+  { date:'2026-10-10', endDate:'2026-10-12', cat:'noche', icon:'🌙', name:'Festival de Salsa de Cartagena', nit:'', place:'Clubes del Centro Histórico', price:'Desde $40.000 COP', short:'10–12 de octubre' },
+  { date:'2026-10-29', endDate:'2026-11-16', cat:'arte', icon:'🎨', name:'Cartagena Jazz Festival', nit:'', place:'Auditorio El Batel', price:'Por confirmar', short:'29 oct – 16 nov' },
+  { date:'2026-10-30', endDate:'2026-10-30', cat:'noche', icon:'🌙', name:'Noche de Candela y Jolgorio', nit:'', place:'Plazas del Centro Histórico', price:'Entrada libre', short:'30 de octubre' },
+  { date:'2026-11-01', endDate:'2026-11-04', cat:'arte', icon:'🎨', name:'Festival Regional de Gaitas', nit:'', place:'Barrio El Socorro', price:'Entrada libre', short:'1–4 de noviembre' },
+  { date:'2026-11-07', endDate:'2026-11-09', cat:'arte', icon:'🎨', name:'Festival de Poesía de Cartagena', nit:'', place:'Bibliotecas y cafés del Centro', price:'Entrada libre', short:'7–9 de noviembre' },
+  { date:'2026-11-11', endDate:'2026-11-16', cat:'cultural', icon:'🎭', name:'Fiestas de Independencia', nit:'', place:'Calles del Centro Histórico', price:'Entrada libre', short:'11–16 de noviembre' },
   { date:'2026-11-13', endDate:'2026-11-14', cat:'plan', icon:'?', name:'Festival Náutico', nit:'', place:'Bahía de Cartagena', price:'Entrada libre', short:'13–14 de noviembre' },
-  { date:'2026-11-29', endDate:'2026-11-29', cat:'cultural', icon:'\uD83C\uDFAD', name:'IRONMAN 70.3 Cartagena', nit:'', place:'Playas de Cartagena', price:'Inscripción ~$700 USD', short:'29 de noviembre' },
-  { date:'2026-12-15', endDate:'2026-12-22', cat:'arte', icon:'\uD83C\uDFA8', name:'Feria de Artesanías de Cartagena', nit:'', place:'Plaza de San Diego', price:'Entrada libre', short:'15–22 de diciembre' },
+  { date:'2026-11-29', endDate:'2026-11-29', cat:'cultural', icon:'🎭', name:'IRONMAN 70.3 Cartagena', nit:'', place:'Playas de Cartagena', price:'Inscripción ~$700 USD', short:'29 de noviembre' },
+  { date:'2026-12-15', endDate:'2026-12-22', cat:'arte', icon:'🎨', name:'Feria de Artesanías de Cartagena', nit:'', place:'Plaza de San Diego', price:'Entrada libre', short:'15–22 de diciembre' },
   { date:'2026-12-16', endDate:'2026-12-24', cat:'cultural', icon:'?', name:'Novenas de Aguinaldos', nit:'', place:'Calles e iglesias del Centro', price:'Entrada libre', short:'16–24 de diciembre' },
-  { date:'2026-12-17', endDate:'2026-12-26', cat:'comida', icon:'\uD83C\uDF7D\uFE0F', name:'Festival del Pastel Cartagenero', nit:'', place:'Plaza de los Coches', price:'Desde $5.000 COP', short:'17–26 de diciembre' },
+  { date:'2026-12-17', endDate:'2026-12-26', cat:'comida', icon:'🍽️', name:'Festival del Pastel Cartagenero', nit:'', place:'Plaza de los Coches', price:'Desde $5.000 COP', short:'17–26 de diciembre' },
 ];
 
 function getUpcomingEvents() {
@@ -757,9 +757,9 @@ function renderEventsList(list) {
       <div class="ev-thumb-full ${etClasses[i % 5]}">${e.icon}<div class="ev-badge-full dia">${meses[m]}</div></div>
       <div class="ev-info-full">
         <h3>${e.name}</h3>
-        <div class="ev-detail-row"><span>\uD83D\uDCC5</span> ${e.short}</div>
-        <div class="ev-detail-row"><span>\uD83D\uDCCD</span> ${e.place}</div>
-        <div class="ev-detail-row"><span>\uD83D\uDCB0</span> ${e.price}</div>
+        <div class="ev-detail-row"><span>📅</span> ${e.short}</div>
+        <div class="ev-detail-row"><span>📍</span> ${e.place}</div>
+        <div class="ev-detail-row"><span>💰</span> ${e.price}</div>
       </div>`;
     feed.appendChild(card);
   });
@@ -866,7 +866,7 @@ function makePlaceCard(p, i) {
     <div class="place-info">
       <h3>${p.name}</h3>
       <div class="place-tags">${p.tags.map(t=>`<span class="p-tag">${t}</span>`).join('')}</div>
-      <div class="place-barrio">?? ${p.barrio}</div>
+      <div class="place-barrio">📍 ${p.barrio}</div>
     </div>`;
   d.addEventListener('click', e => { if(!e.target.closest('.heart-btn')) openModal(p); });
   return d;
@@ -908,7 +908,7 @@ function updateMapPins() {
       html:`<div style="background:#1C1508;border:2px solid #C9983A;border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 10px rgba(0,0,0,0.5);"><svg viewBox="0 0 80 80" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">${getSVG(p.cat)}</svg></div>`,
       className:'', nit:'', iconSize:[36,36], iconAnchor:[18,18]
     });
-    const marker = L.marker(p.coords,{icon}).addTo(leafMap).bindPopup(`<div class="popup-name">${p.name}</div><div class="popup-barrio">?? ${p.barrio}</div>`);
+    const marker = L.marker(p.coords,{icon}).addTo(leafMap).bindPopup(`<div class="popup-name">${p.name}</div><div class="popup-barrio">📍 ${p.barrio}</div>`);
     mapMarkers.push(marker);
   });
 }
@@ -950,7 +950,7 @@ function openModal(p) {
   document.getElementById('modal-title').textContent = p.name;
   document.getElementById('modal-tags').innerHTML = p.tags.map(t=>`<span class="m-tag">${t}</span>`).join('');
   document.getElementById('modal-desc').textContent = p.desc;
-  document.getElementById('modal-barrio').innerHTML = `?? ${p.barrio}`;
+  document.getElementById('modal-barrio').innerHTML = `📍 ${p.barrio}`;
 
   const full = Math.floor(p.rating);
   const starsHtml = Array.from({length:5},(_,i)=>`<i class="star fa${i<full?'s':'r'} fa-star ${i<full?'on':'off'}"></i>`).join('');
@@ -962,7 +962,7 @@ function openModal(p) {
 
   let infoHtml = '';
   if (p.telefono) infoHtml += `<div class="info-line"><span>??</span> <span style="cursor:pointer;color:var(--gold);" onclick="navigator.clipboard.writeText('${p.telefono}');this.innerText='¡Copiado!';">${p.telefono}</span></div>`;
-  if (p.instagram) infoHtml += `<div class="info-line"><span>\uD83D\uDCF8</span> <a href="https://instagram.com/${p.instagram}" target="_blank" style="color:var(--gold);text-decoration:none;">@${p.instagram}</a></div>`;
+  if (p.instagram) infoHtml += `<div class="info-line"><span>📸</span> <a href="https://instagram.com/${p.instagram}" target="_blank" style="color:var(--gold);text-decoration:none;">@${p.instagram}</a></div>`;
   document.getElementById('modal-info').innerHTML = infoHtml;
 
   if (p.menu && p.menu.some(it => it)) {
