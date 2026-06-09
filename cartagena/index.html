@@ -961,7 +961,7 @@ function openModal(p) {
     <div class="detail-box"><div class="d-label">Precio</div><div class="d-val">${p.precio}</div></div>`;
 
   let infoHtml = '';
-  if (p.telefono) infoHtml += `<div class="info-line"><span>??</span> <span style="cursor:pointer;color:var(--gold);" onclick="navigator.clipboard.writeText('${p.telefono}');this.innerText='¡Copiado!';">${p.telefono}</span></div>`;
+  if (p.telefono) infoHtml += `<div class="info-line"><span>ℹ️</span> <span style="cursor:pointer;color:var(--gold);" onclick="navigator.clipboard.writeText('${p.telefono}');this.innerText='¡Copiado!';">${p.telefono}</span></div>`;
   if (p.instagram) infoHtml += `<div class="info-line"><span>📸</span> <a href="https://instagram.com/${p.instagram}" target="_blank" style="color:var(--gold);text-decoration:none;">@${p.instagram}</a></div>`;
   document.getElementById('modal-info').innerHTML = infoHtml;
 
